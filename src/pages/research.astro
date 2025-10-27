@@ -1,0 +1,47 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getCollection } from 'astro:content';
+
+const essays = await getCollection('essays');
+const sortedEssays = essays.sort((a, b) => {
+  const aDate = a.data.published ? new Date(a.data.published).getTime() : 0;
+  const bDate = b.data.published ? new Date(b.data.published).getTime() : 0;
+  return bDate - aDate;
+});
+---
+<SiteLayout title="Cynchorus — Research" description="Research essays, publications, and codex fragments from the Cynchorus lab." ogImage="/favicon.svg">
+  <section class="space-y-10">
+    <header class="space-y-3">
+      <h1 class="text-3xl font-light uppercase tracking-[0.35em] text-white sm:text-4xl">Research library</h1>
+      <p class="max-w-3xl text-lg text-slate-300">
+        Essays, field notes, and codex fragments from active Cynchorus investigations into harmonic machine thinking.
+      </p>
+      <p class="text-xs uppercase tracking-[0.3em] text-indigo-200/70">// TODO: content block — add overview of research streams</p>
+    </header>
+    <div class="space-y-6">
+      {sortedEssays.length === 0 ? (
+        <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Research entries coming soon.</p>
+      ) : (
+        <ul class="space-y-4">
+          {sortedEssays.map((entry) => (
+            <li class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:border-indigo-400/40">
+              <a class="block space-y-2" href={`/research/${entry.slug}/`}>
+                <p class="text-xs uppercase tracking-[0.35em] text-indigo-300/70">
+                  {entry.data.published
+                    ? new Date(entry.data.published).toLocaleDateString(undefined, {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric',
+                      })
+                    : 'Undated fragment'}
+                </p>
+                <h2 class="text-xl font-medium tracking-[0.15em] text-white">{entry.data.title}</h2>
+                {entry.data.summary && <p class="text-sm text-slate-300">{entry.data.summary}</p>}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  </section>
+</SiteLayout>

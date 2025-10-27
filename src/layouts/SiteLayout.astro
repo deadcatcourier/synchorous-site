@@ -1,0 +1,121 @@
+---
+const {
+  title = 'Cynchorus',
+  description = 'Cynchorus is a research collective exploring harmonic machine thinking.',
+  ogImage = '/favicon.svg',
+} = Astro.props;
+
+const navLinks = [
+  { href: '/', label: 'Manifesto' },
+  { href: '/about', label: 'About' },
+  { href: '/architecture', label: 'Architecture' },
+  { href: '/research', label: 'Research' },
+  { href: '/updates', label: 'Updates' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+<!DOCTYPE html>
+<html lang="en" class="bg-slate-950">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.9/dist/tailwind.min.css"
+      integrity="sha384-9zpgfVe3BsRoX2BZal1UysGk2JGx8a5W1kKAkrz1p8MGN2z6/UKH7f4afgAvFp8Y"
+      crossorigin="anonymous"
+    />
+    <style>
+      :root {
+        font-family: 'Inter', 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+      }
+
+      ::selection {
+        background: rgba(99, 102, 241, 0.25);
+        color: #f8fafc;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100 antialiased">
+    <div class="flex min-h-screen flex-col">
+      <header class="border-b border-white/5 backdrop-blur">
+        <nav class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
+          <a href="/" class="text-lg font-semibold tracking-[0.35em] uppercase text-slate-100">cynchorus</a>
+          <div class="hidden items-center gap-8 md:flex">
+            {navLinks.map((link) => {
+              const normalizedHref = link.href.replace(/\/$/, '') || '/';
+              const isActive = normalizedHref === '/' ? currentPath === '/' : currentPath.startsWith(normalizedHref);
+              return (
+                <a
+                  href={link.href}
+                  class={`text-sm uppercase tracking-[0.2em] transition-colors ${
+                    isActive ? 'text-white' : 'text-slate-300 hover:text-white'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
+          </div>
+          <details class="relative md:hidden">
+            <summary class="flex cursor-pointer items-center gap-2 text-sm uppercase tracking-[0.2em] text-slate-300">
+              Menu
+              <span class="block h-4 w-4 rounded-full border border-slate-400"></span>
+            </summary>
+            <div class="absolute right-0 mt-4 w-48 rounded-xl border border-white/10 bg-slate-900/95 p-4 shadow-xl">
+              <ul class="space-y-3 text-sm uppercase tracking-[0.2em] text-slate-300">
+                {navLinks.map((link) => (
+                  <li>
+                    <a class="block py-1 transition-colors hover:text-white" href={link.href}>
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </details>
+        </nav>
+      </header>
+
+      <main class="mx-auto w-full max-w-6xl flex-1 px-6 py-16 sm:py-20 lg:py-24">
+        <slot />
+      </main>
+
+      <footer class="border-t border-white/5">
+        <div class="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
+          <p class="tracking-[0.25em] uppercase">Cynchorus Research Lab</p>
+          <div class="flex flex-wrap items-center gap-6 uppercase tracking-[0.2em]">
+            <a class="transition-colors hover:text-white" href="/contact">Contact</a>
+            <a class="transition-colors hover:text-white" href="/research">Research</a>
+            <a class="transition-colors hover:text-white" href="/updates">Updates</a>
+          </div>
+          <p class="text-xs uppercase tracking-[0.3em]">© {new Date().getFullYear()} Cynchorus. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

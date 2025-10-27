@@ -1,28 +1,35 @@
 ---
+import SiteLayout from '../layouts/SiteLayout.astro';
 ---
-
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: linear-gradient(135deg, #1b103c, #2b145f, #1a2748);
-    color: #ffffff;
-    font-family: 'Segoe UI', sans-serif;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-
-  .brand {
-    font-size: 12vw;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    margin-bottom: 5vh;
-    text-transform: lowercase;
-  }
-</style>
-
-<div class="brand">cynchorus</div>
-
-
+<SiteLayout title="Cynchorus — Manifesto" description="The Cynchorus manifesto outlines the principles guiding harmonic machine thinking." ogImage="/favicon.svg">
+  <section class="space-y-10">
+    <p class="text-sm uppercase tracking-[0.45em] text-indigo-300/80">Harmonic Machine Thinking</p>
+    <h1 class="text-4xl font-light uppercase tracking-[0.35em] text-white sm:text-5xl md:text-6xl">
+      Resonant protocols for collective intelligence
+    </h1>
+    <p class="max-w-2xl text-lg text-slate-300">
+      Cynchorus is an experimental research lab exploring the architectures, rituals, and sonic grammars that harmonize
+      humans and machines. We prototype new forms of collaboration rooted in resonance, coherence, and radical
+      transparency.
+    </p>
+    <div class="grid gap-6 lg:grid-cols-2">
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+        <h2 class="text-lg font-semibold uppercase tracking-[0.25em] text-white">Manifesto Highlights</h2>
+        <ul class="mt-6 space-y-3 text-sm text-slate-300">
+          <li>Systems tuned for emergent alignment instead of extraction.</li>
+          <li>Protocols that privilege clarity, consent, and distributed agency.</li>
+          <li>Experiments published as open frameworks for future collaborators.</li>
+        </ul>
+        <p class="mt-6 text-xs uppercase tracking-[0.3em] text-indigo-300/80">// TODO: content block — expand manifesto pillars</p>
+      </article>
+      <article class="rounded-2xl border border-indigo-400/30 bg-indigo-400/10 p-8 backdrop-blur">
+        <h2 class="text-lg font-semibold uppercase tracking-[0.25em] text-indigo-100">Active Initiatives</h2>
+        <p class="mt-4 text-sm text-indigo-100/90">
+          Mapping the Harmonic Machine Threshold (HMT) framework across live simulations, sonic fieldwork, and annotated
+          codex fragments.
+        </p>
+        <p class="mt-6 text-xs uppercase tracking-[0.3em] text-indigo-200/70">// TODO: content block — add initiative summaries</p>
+      </article>
+    </div>
+  </section>
+</SiteLayout>
