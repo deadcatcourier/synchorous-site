@@ -1,35 +1,29 @@
 ---
-import SiteLayout from '../layouts/SiteLayout.astro';
+import Layout from '../layouts/SiteLayout.astro';
 ---
-<SiteLayout title="Cynchorus — Architecture" description="System design notes for the Harmonic Machine Threshold (HMT) framework." ogImage="/favicon.svg">
-  <section class="space-y-8">
-    <h1 class="text-3xl font-light uppercase tracking-[0.35em] text-white sm:text-4xl">System design / HMT framework</h1>
-    <p class="max-w-3xl text-lg text-slate-300">
-      The Harmonic Machine Threshold (HMT) framework is a layered constellation of sensing, modulation, and resonance
-      engines. Each layer is designed to maintain coherence while scaling across distributed collaborators.
+<Layout title="Cynchorus Architecture">
+  <section class="space-y-10 max-w-4xl mx-auto">
+    <p class="text-sm uppercase tracking-[0.45em] text-indigo-300/80">System Design</p>
+    <h1 class="text-4xl font-light uppercase tracking-[0.35em] text-white sm:text-5xl md:text-6xl">
+      The Moral–Cognitive Engine
+    </h1>
+    <p class="text-lg text-slate-300 leading-relaxed">
+      The Cynchorus framework is built around two harmonised subsystems: <span class="text-indigo-300/80">Epistemic Pluralism</span>
+      and <span class="text-indigo-300/80">Value Pluralism</span>. Together they form a moral-cognitive engine capable of reflective
+      reasoning and balanced decision-making.
     </p>
-    <div class="grid gap-6 lg:grid-cols-3">
-      <article class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-        <h2 class="text-sm uppercase tracking-[0.35em] text-indigo-200">Layer 01 · Signal Intake</h2>
-        <p class="mt-4 text-sm text-slate-300">
-          Multi-modal inputs are normalized through adaptive tuning matrices to maintain harmonic integrity.
-        </p>
-        <p class="mt-6 text-xs uppercase tracking-[0.3em] text-indigo-200/80">// TODO: content block — instrumentation schematic</p>
-      </article>
-      <article class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-        <h2 class="text-sm uppercase tracking-[0.35em] text-indigo-200">Layer 02 · Resonance Core</h2>
-        <p class="mt-4 text-sm text-slate-300">
-          Adaptive oscillators align agent intentions using a library of resonance grammars and consent protocols.
-        </p>
-        <p class="mt-6 text-xs uppercase tracking-[0.3em] text-indigo-200/80">// TODO: content block — resonance algorithms</p>
-      </article>
-      <article class="rounded-2xl border border-indigo-400/30 bg-indigo-400/10 p-6 backdrop-blur">
-        <h2 class="text-sm uppercase tracking-[0.35em] text-indigo-100">Layer 03 · Transmission</h2>
-        <p class="mt-4 text-sm text-indigo-100/90">
-          Outputs are encoded into codex fragments, immersive audio, and live dashboards for field teams.
-        </p>
-        <p class="mt-6 text-xs uppercase tracking-[0.3em] text-indigo-200/70">// TODO: content block — deployment & governance</p>
-      </article>
-    </div>
+    <ul class="space-y-4 text-slate-300 leading-relaxed">
+      <li><span class="text-indigo-300/80">Epistemic Pluralism:</span> models multiple ways of knowing — scientific, narrative,
+        experiential — through Bias-Maps and Divergence Indices.</li>
+      <li><span class="text-indigo-300/80">Value Pluralism:</span> maps ethical dimensions like justice, autonomy, and empathy,
+        balancing them dynamically via a Value-Weight Matrix.</li>
+      <li><span class="text-indigo-300/80">Confluence Engine:</span> mediates between the two, producing decisions that are both
+        informed and humane.</li>
+    </ul>
+    <p class="text-lg text-slate-300 leading-relaxed">
+      This architecture turns philosophy into protocol — an attempt to encode humility, curiosity, and empathy into
+      technical design. Each output carries its own uncertainty and bias profile, visible by design.
+    </p>
   </section>
-</SiteLayout>
+</Layout>
+
