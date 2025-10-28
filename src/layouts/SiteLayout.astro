@@ -10,12 +10,20 @@ const {
 const navLinks = [
   { href: '/', label: 'Manifesto' },
   { href: '/about', label: 'About' },
-  { href: '/architecture', label: 'Architecture' },
-  { href: '/architecture/target-performance-tiers', label: 'Performance' },
+  {
+    label: 'Architecture',
+    href: '/architecture',
+    children: [
+      { href: '/architecture/target-performance-tiers', label: 'Performance Tiers' },
+      // future: { href: '/architecture/system-model', label: 'System Model' },
+      // future: { href: '/architecture/data-pipeline', label: 'Data Pipeline' },
+    ],
+  },
   { href: '/research', label: 'Research' },
   { href: '/updates', label: 'Updates' },
   { href: '/contact', label: 'Contact' },
 ];
+
 
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
@@ -63,38 +71,78 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
         <nav class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
           <a href="/" class="text-lg font-semibold tracking-[0.35em] uppercase text-slate-100">cynchorus</a>
           <div class="hidden items-center gap-8 md:flex">
-            {navLinks.map((link) => {
-              const normalizedHref = link.href.replace(/\/$/, '') || '/';
-              const isActive = normalizedHref === '/' ? currentPath === '/' : currentPath.startsWith(normalizedHref);
-              return (
-                <a
-                  href={link.href}
-                  class={`text-sm uppercase tracking-[0.2em] transition-colors ${
-                    isActive ? 'text-white' : 'text-slate-300 hover:text-white'
-                  }`}
-                >
-                  {link.label}
-                </a>
-              );
-            })}
+  {navLinks.map((link) => {
+    const normalizedHref = link.href?.replace(/\/$/, '') || '/';
+    const isActive =
+      normalizedHref === '/'
+        ? currentPath === '/'
+        : currentPath.startsWith(normalizedHref);
+
+    return (
+      <div class="relative group">
+        <a
+          href={link.href}
+          class={`text-sm uppercase tracking-[0.2em] transition-colors ${
+            isActive ? 'text-white' : 'text-slate-300 hover:text-white'
+          }`}
+        >
+          {link.label}
+        </a>
+
+        {link.children && (
+          <div class="absolute left-0 mt-3 hidden w-56 rounded-xl border border-white/10 bg-slate-900/95 p-4 shadow-xl group-hover:block">
+            <ul class="space-y-3 text-sm uppercase tracking-[0.2em] text-slate-300">
+              {link.children.map((child) => (
+                <li>
+                  <a
+                    href={child.href}
+                    class={`block py-1 transition-colors ${
+                      currentPath.startsWith(child.href)
+                        ? 'text-white'
+                        : 'hover:text-white'
+                    }`}
+                  >
+                    {child.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
+        )}
+      </div>
+    );
+  })}
+</div>
+
           <details class="relative md:hidden">
-            <summary class="flex cursor-pointer items-center gap-2 text-sm uppercase tracking-[0.2em] text-slate-300">
-              Menu
-              <span class="block h-4 w-4 rounded-full border border-slate-400"></span>
-            </summary>
-            <div class="absolute right-0 mt-4 w-48 rounded-xl border border-white/10 bg-slate-900/95 p-4 shadow-xl">
-              <ul class="space-y-3 text-sm uppercase tracking-[0.2em] text-slate-300">
-                {navLinks.map((link) => (
-                  <li>
-                    <a class="block py-1 transition-colors hover:text-white" href={link.href}>
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </details>
+  <summary class="flex cursor-pointer items-center gap-2 text-sm uppercase tracking-[0.2em] text-slate-300">
+    Menu
+    <span class="block h-4 w-4 rounded-full border border-slate-400"></span>
+  </summary>
+  <div class="absolute right-0 mt-4 w-60 rounded-xl border border-white/10 bg-slate-900/95 p-4 shadow-xl">
+    <ul class="space-y-3 text-sm uppercase tracking-[0.2em] text-slate-300">
+      {navLinks.map((link) => (
+        <li>
+          <a class="block py-1 transition-colors hover:text-white" href={link.href}>
+            {link.label}
+          </a>
+          {link.children && (
+            <ul class="ml-4 mt-2 space-y-2 border-l border-white/10 pl-4">
+              {link.children.map((child) => (
+                <li>
+                  <a class="block py-1 text-slate-400 hover:text-white" href={child.href}>
+                    {child.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+</details>
+
         </nav>
       </header>
 
