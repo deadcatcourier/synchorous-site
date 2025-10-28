@@ -72,47 +72,21 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
           <a href="/" class="text-lg font-semibold tracking-[0.35em] uppercase text-slate-100">cynchorus</a>
           <div class="hidden items-center gap-8 md:flex">
   {navLinks.map((link) => {
-    const normalizedHref = link.href?.replace(/\/$/, '') || '/';
     const isActive =
-      normalizedHref === '/'
-        ? currentPath === '/'
-        : currentPath.startsWith(normalizedHref);
-
+      currentPath === link.href || currentPath.startsWith(`${link.href}/`);
     return (
-      <div class="relative group">
-        <a
-          href={link.href}
-          class={`text-sm uppercase tracking-[0.2em] transition-colors ${
-            isActive ? 'text-white' : 'text-slate-300 hover:text-white'
-          }`}
-        >
-          {link.label}
-        </a>
-
-        {link.children && (
-          <div class="absolute left-0 mt-3 hidden w-56 rounded-xl border border-white/10 bg-slate-900/95 p-4 shadow-xl group-hover:block">
-            <ul class="space-y-3 text-sm uppercase tracking-[0.2em] text-slate-300">
-              {link.children.map((child) => (
-                <li>
-                  <a
-                    href={child.href}
-                    class={`block py-1 transition-colors ${
-                      currentPath.startsWith(child.href)
-                        ? 'text-white'
-                        : 'hover:text-white'
-                    }`}
-                  >
-                    {child.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </div>
+      <a
+        href={link.href}
+        class={`text-sm uppercase tracking-[0.2em] transition-colors ${
+          isActive ? 'text-white' : 'text-slate-300 hover:text-white'
+        }`}
+      >
+        {link.label}
+      </a>
     );
   })}
 </div>
+
 
           <details class="relative md:hidden">
   <summary class="flex cursor-pointer items-center gap-2 text-sm uppercase tracking-[0.2em] text-slate-300">
@@ -145,6 +119,34 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 
         </nav>
       </header>
+{(() => {
+  // find current section that has children
+  const activeSection = navLinks.find(
+    (l) => currentPath.startsWith(l.href) && l.children
+  );
+
+ return (
+    activeSection?.children && (
+      <nav class="w-full border-b border-white/5 bg-slate-900/80 backdrop-blur animate-subbar">
+        <div class="mx-auto flex w-full max-w-6xl items-center justify-start gap-8 px-6 py-3">
+          {activeSection.children.map((child) => {
+            const childActive = currentPath === child.href;
+            return (
+              <a
+                href={child.href}
+                class={`text-xs uppercase tracking-[0.25em] transition-colors ${
+                  childActive ? 'text-indigo-300' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                {child.label}
+              </a>
+            );
+          })}
+        </div>
+      </nav>
+    )
+  );
+})()}
 
       <main class="mx-auto w-full max-w-6xl flex-1 px-6 py-16 sm:py-20 lg:py-24">
         <slot />
