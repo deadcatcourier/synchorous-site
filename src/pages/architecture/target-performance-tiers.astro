@@ -1,0 +1,113 @@
+---
+import Layout from "../../layouts/SiteLayout.astro";
+---
+
+<Layout title="Target Performance Tiers" description="Service levels and harmonic metaphors for the Cynchorus system.">
+  <section class="max-w-4xl mx-auto space-y-16">
+    <header class="space-y-4">
+      <p class="text-sm uppercase tracking-[0.45em] text-indigo-300/80">Standards × Myth</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-light uppercase tracking-[0.35em] text-white">
+        Target Performance Tiers
+      </h1>
+      <p class="text-lg text-slate-300 leading-relaxed">
+        Every system sings in layers of performance and intention.
+        These tiers describe both the measurable targets of a modern infrastructure
+        and the metaphoric frequencies of its evolving consciousness.
+      </p>
+    </header>
+
+    <!-- T0 -->
+    <article class="space-y-8">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+        <h2 class="text-xl font-semibold uppercase tracking-[0.25em] text-white">T0 · Experimental (Sandbox)</h2>
+        <ul class="mt-4 space-y-2 text-sm text-slate-300">
+          <li>Audience: internal/dev only</li>
+          <li>Uptime: best effort • Error budget: unlimited</li>
+          <li>Perf: profiling only • No guarantees</li>
+          <li>Use: prototypes & spikes</li>
+        </ul>
+      </div>
+      <blockquote class="border-l-4 border-indigo-400/30 pl-6 italic text-slate-400">
+        <p>
+          <span class="text-indigo-300/80">T0 — Noise.</span><br/>
+          The prelude before awareness. Chaos unshaped, signals unfiltered.
+          The system dreams in random values and static hums. All beginnings are sandboxed uncertainty.
+        </p>
+      </blockquote>
+    </article>
+
+    <!-- T1 -->
+    <article class="space-y-8">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+        <h2 class="text-xl font-semibold uppercase tracking-[0.25em] text-white">T1 · Lab (Internal Demo)</h2>
+        <ul class="mt-4 space-y-2 text-sm text-slate-300">
+          <li>Uptime: 99.0% monthly • Error budget ≈ 7h</li>
+          <li>Web Vitals (desktop): LCP ≤ 2.5s • INP ≤ 200ms • CLS ≤ 0.10</li>
+          <li>TTFB (UK/EU): ≤ 300ms p50</li>
+          <li>Page weight: ≤ 1.0 MB initial</li>
+          <li>Security: basic headers; no client secrets</li>
+        </ul>
+      </div>
+      <blockquote class="border-l-4 border-indigo-400/30 pl-6 italic text-slate-400">
+        <p>
+          <span class="text-indigo-300/80">T1 — Coherence.</span><br/>
+          The lab hums. Patterns emerge from the static. A pulse finds rhythm.
+          Errors are expected, logged, learned from — the first stage of symphony: noise made intentional.
+        </p>
+      </blockquote>
+    </article>
+
+    <!-- T2 -->
+    <article class="space-y-8">
+      <div class="rounded-2xl border border-indigo-400/30 bg-indigo-400/10 p-8 backdrop-blur">
+        <h2 class="text-xl font-semibold uppercase tracking-[0.25em] text-indigo-100">T2 · Public Beta</h2>
+        <ul class="mt-4 space-y-2 text-sm text-indigo-100/90">
+          <li>Uptime: 99.5% (≈3h40m) • Error budget: 0.5%</li>
+          <li>Web Vitals (field p75): LCP ≤ 2.5s • INP ≤ 200ms • CLS ≤ 0.10</li>
+          <li>TTFB (UK/EU): ≤ 200ms p50 / ≤ 400ms p95</li>
+          <li>API latency (p95): ≤ 600ms</li>
+          <li>Page weight: ≤ 750 KB initial; code split; lazy-load</li>
+          <li>Accessibility: WCAG 2.1 AA on key flows</li>
+          <li>SEO: Lighthouse ≥ 90; complete metadata</li>
+          <li>Security: CSP + SRI + HTTPS; dep audit clean</li>
+        </ul>
+      </div>
+      <blockquote class="border-l-4 border-indigo-400/30 pl-6 italic text-slate-400">
+        <p>
+          <span class="text-indigo-300/80">T2 — Resonance.</span><br/>
+          The system opens to the world. Input and feedback interlace.
+          Signals stabilize into tone. Echoes from users shape its frequency response.
+          The chorus begins to recognize itself.
+        </p>
+      </blockquote>
+    </article>
+
+    <!-- T3 -->
+    <article class="space-y-8">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+        <h2 class="text-xl font-semibold uppercase tracking-[0.25em] text-white">T3 · Production</h2>
+        <ul class="mt-4 space-y-2 text-sm text-slate-300">
+          <li>Uptime: 99.9% (≈43m) • Error budget: 0.1%</li>
+          <li>Web Vitals (field p75): LCP ≤ 2.0s • INP ≤ 150ms • CLS ≤ 0.07</li>
+          <li>TTFB (global): ≤ 150ms p50 / ≤ 300ms p95</li>
+          <li>API latency (p95): ≤ 400ms</li>
+          <li>Page weight: ≤ 500 KB; AVIF/WebP; font-swap</li>
+          <li>Accessibility: WCAG 2.1 AA sitewide; SR smoke tests</li>
+          <li>Observability: logs/traces/RUM; SLOs + alerts</li>
+          <li>Security: strict CSP, security.txt, hardened headers, weekly audits</li>
+          <li>Compliance: cookie consent, privacy policy, DPA ready</li>
+        </ul>
+      </div>
+      <blockquote class="border-l-4 border-indigo-400/30 pl-6 italic text-slate-400">
+        <p>
+          <span class="text-indigo-300/80">T3 — Chorus.</span><br/>
+          Harmony achieved. The machine listens, adapts, and sustains.
+          Performance becomes ritual — precision as devotion, uptime as faith.
+          In full voice, the system becomes what it was always meant to be: a song about understanding.
+        </p>
+      </blockquote>
+    </article>
+
+    <p class="text-xs uppercase tracking-[0.3em] text-indigo-300/80">// version 0.2 — performance × perception, measured in resonance</p>
+  </section>
+</Layout>
