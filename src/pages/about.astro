@@ -1,29 +1,26 @@
 ---
-import SiteLayout from '../layouts/SiteLayout.astro';
+import Layout from '../layouts/SiteLayout.astro';
 ---
-<SiteLayout title="Cynchorus — About" description="Overview of the Cynchorus project ethos, collaborators, and lab practices." ogImage="/favicon.svg">
-  <section class="space-y-8">
-    <h1 class="text-3xl font-light uppercase tracking-[0.35em] text-white sm:text-4xl">Project overview & ethos</h1>
-    <p class="max-w-3xl text-lg text-slate-300">
-      Cynchorus operates at the intersection of sonic research, systems engineering, and participatory design. We
-      prototype living infrastructures that amplify resonance across human, machine, and ecological agents.
+<Layout title="About Cynchorus">
+  <section class="space-y-10 max-w-3xl mx-auto">
+    <p class="text-sm uppercase tracking-[0.45em] text-indigo-300/80">About</p>
+    <h1 class="text-4xl font-light uppercase tracking-[0.35em] text-white sm:text-5xl md:text-6xl">
+      The Resonant Lab
+    </h1>
+    <p class="text-lg text-slate-300 leading-relaxed">
+      Cynchorus is an independent research initiative exploring the architecture of human–machine teaming.
+      We treat collaboration as a harmonic process — where data, ethics, and narrative align through resonance rather than control.
     </p>
-    <div class="grid gap-8 lg:grid-cols-2">
-      <article class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-        <h2 class="text-sm uppercase tracking-[0.35em] text-indigo-200">Lab Practice</h2>
-        <p class="mt-4 text-sm text-slate-300">
-          Each experiment is conducted as an open score—documented, recorded, and shared with collaborators around the
-          globe. Rituals prioritize embodied listening, consent-driven data stewardship, and public iteration logs.
-        </p>
-        <p class="mt-6 text-xs uppercase tracking-[0.3em] text-indigo-200/80">// TODO: content block — add lab principles & protocols</p>
-      </article>
-      <article class="rounded-2xl border border-indigo-400/30 bg-indigo-400/10 p-8 backdrop-blur">
-        <h2 class="text-sm uppercase tracking-[0.35em] text-indigo-100">Collaborators</h2>
-        <p class="mt-4 text-sm text-indigo-100/90">
-          Core contributors include systems theorists, composers, software architects, and field researchers.
-        </p>
-        <p class="mt-6 text-xs uppercase tracking-[0.3em] text-indigo-200/70">// TODO: content block — list collaborators & partner nodes</p>
-      </article>
-    </div>
+    <p class="text-lg text-slate-300 leading-relaxed">
+      The project began as a study in cognitive systems and evolved into a design experiment: how to build frameworks
+      where humans and intelligent agents can learn, disagree, and adapt together — transparently and with intent.
+    </p>
+    <blockquote class="border-l-4 border-indigo-400/40 pl-6 italic text-slate-400">
+      “Before we built machines that could think, we built machines that could sing.”
+    </blockquote>
+    <p class="text-lg text-slate-300 leading-relaxed">
+      Every layer of Cynchorus — from the Bias-Map to the Divergence Index — is a tool for reflexivity.
+      Each aims to make cognition visible: a mirror for how we understand, decide, and evolve.
+    </p>
   </section>
-</SiteLayout>
+</Layout>
