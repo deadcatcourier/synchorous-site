@@ -19,8 +19,8 @@ const description = entry.data.summary ?? 'Cynchorus research fragment.';
   <article class="space-y-6">
     <header class="space-y-3">
       <p class="text-xs uppercase tracking-[0.35em] text-indigo-200/70">
-        {entry.data.published
-          ? new Date(entry.data.published).toLocaleDateString(undefined, {
+        {entry.data.created
+          ? new Date(entry.data.created).toLocaleDateString(undefined, {
               year: 'numeric',
               month: 'short',
               day: 'numeric',
