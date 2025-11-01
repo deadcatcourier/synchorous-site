@@ -10,8 +10,8 @@ const essays = defineCollection({
     tags: z.array(z.string()).optional(),
     summary: z.string().optional(),
     author: z.string().optional(),
-    created: z.string().optional(),
-    updated: z.string().optional(),
+    created: z.date().optional(),
+    updated: z.date().optional(),
   }),
 });
 
