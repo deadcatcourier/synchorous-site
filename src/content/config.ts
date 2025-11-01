@@ -1,25 +1,32 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 const essays = defineCollection({
-  type: 'content',
   schema: z.object({
     title: z.string(),
-    summary: z.string().optional(),
-    published: z.date().optional(),
-    authors: z.array(z.string()).optional(),
+    type: z.string(),
+    category: z.string().optional(),
+    version: z.string().optional(),
+    status: z.string().optional(),
     tags: z.array(z.string()).optional(),
+    summary: z.string().optional(),
+    author: z.string().optional(),
+    created: z.string().optional(),
+    updated: z.string().optional(),
   }),
 });
 
-const updates = defineCollection({
-  type: 'content',
+const glossary = defineCollection({
   schema: z.object({
     title: z.string(),
+    type: z.string(),
+    category: z.string().optional(),
     summary: z.string().optional(),
-    published: z.date().optional(),
-    tags: z.array(z.string()).optional(),
-    externalLink: z.string().url().optional(),
+    author: z.string().optional(),
   }),
 });
 
-export const collections = { essays, updates };
+export const collections = {
+  essays,
+  glossary,
+};
+
