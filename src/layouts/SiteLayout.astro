@@ -19,10 +19,20 @@ const navLinks = [
       // future: { href: '/architecture/data-pipeline', label: 'Data Pipeline' },
     ],
   },
+  {
+    label: 'Essays',
+    href: '/essays',
+    children: [
+      { href: '/essays/epistemic_teaming', label: 'Epistemic Teaming' },
+      // future: { href: '/essays/epistemic_cartography', label: 'Epistemic Cartography' },
+    ],
+  },
+  { href: '/glossary', label: 'Glossary' },
   { href: '/research', label: 'Research' },
   { href: '/updates', label: 'Updates' },
   { href: '/contact', label: 'Contact' },
 ];
+
 
 
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
