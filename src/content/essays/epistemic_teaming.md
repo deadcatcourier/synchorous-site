@@ -132,11 +132,11 @@ In a world dominated by algorithmic certainty, Cynchorus argues for something su
 ### **References**
 
 For definitions of key terms, see:  
-[Epistemic Fairness](../glossary/epistemic_fairness) ·  
-[Constructive Chaos](../glossary/constructive_chaos) ·  
-[Transparency of Inference](../glossary/transparency_of_inference) ·  
-[Reversibility Principle](../glossary/reversibility_principle) ·  
-[.values.json](../glossary/values_json)
+[Epistemic Fairness](../../glossary/epistemic_fairness) ·  
+[Constructive Chaos](../../glossary/constructive_chaos) ·  
+[Transparency of Inference](../../glossary/transparency_of_inference) ·  
+[Reversibility Principle](../../glossary/reversibility_principle) ·  
+[.values.json](../../glossary/values_json)
 
 ---
 
