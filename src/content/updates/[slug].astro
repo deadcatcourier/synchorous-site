@@ -1,0 +1,41 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const updates = await getCollection('updates');
+  return updates.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const title = `${entry.data.title} — Cynchorus Research`;
+const description = entry.data.summary ?? 'Cynchorus research fragment.';
+---
+<SiteLayout title={title} description={description} ogImage="/favicon.svg">
+  <article class="space-y-6">
+    <header class="space-y-3">
+      <p class="text-xs uppercase tracking-[0.35em] text-indigo-200/70">
+        {entry.data.created
+          ? new Date(entry.data.created).toLocaleDateString(undefined, {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
+            })
+          : 'Undated fragment'}
+      </p>
+      <h1 class="text-3xl font-medium tracking-[0.2em] text-white sm:text-4xl">{entry.data.title}</h1>
+      {entry.data.summary && <p class="max-w-2xl text-slate-300">{entry.data.summary}</p>}
+      <p class="text-xs uppercase tracking-[0.3em] text-indigo-200/70">// TODO: content block — add research metadata</p>
+    </header>
+    <div class="space-y-4 text-slate-200 leading-relaxed">
+      <Content />
+    </div>
+    <footer class="border-t border-white/10 pt-6 text-xs uppercase tracking-[0.3em] text-indigo-200/70">
+      // TODO: content block — add related research links & citations
+    </footer>
+  </article>
+</SiteLayout>

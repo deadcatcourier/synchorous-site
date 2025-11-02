@@ -1,7 +1,7 @@
 ---
 title: "Lab Node Calibration"
 summary: "Initiated the first resonance sweeps across the HMT node mesh and opened the collaborative log."
-published: 2024-11-12
+created: 2024-11-12
 tags:
   - operations
   - release

@@ -4,8 +4,8 @@ import { getCollection } from 'astro:content';
 
 const updates = await getCollection('updates');
 const sortedUpdates = updates.sort((a, b) => {
-  const aDate = a.data.published ? new Date(a.data.published).getTime() : 0;
-  const bDate = b.data.published ? new Date(b.data.published).getTime() : 0;
+  const aDate = a.data.created ? new Date(a.data.created).getTime() : 0;
+  const bDate = b.data.created ? new Date(b.data.created).getTime() : 0;
   return bDate - aDate;
 });
 ---

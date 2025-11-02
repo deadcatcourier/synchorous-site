@@ -25,8 +25,18 @@ const glossary = defineCollection({
   }),
 });
 
+const updates = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    summary: z.string().optional(),
+    created: z.date().optional(),
+    tags: z.array(z.string()).optional(),
+  }),
+});
+
 export const collections = {
   essays,
   glossary,
+  updates,
 };
 

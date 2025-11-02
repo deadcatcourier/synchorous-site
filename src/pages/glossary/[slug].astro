@@ -3,20 +3,17 @@ import { getCollection } from "astro:content";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 
 export async function getStaticPaths() {
-  const entries = await getCollection("updates");
-  return entries.map((term) => ({
-    params: { slug: term.slug },
-    props: { term },
-  }));
+  const terms = await getCollection("glossary");
+  return terms.map((t) => ({ params: { slug: t.slug }, props: { term: t } }));
 }
 
 const { term } = Astro.props;
+const { Content } = await term.render();
 ---
 
 <SiteLayout title={term.data.title}>
   <article class="prose prose-invert max-w-none">
-    <h1>{term.data.title}</h1>
-    <Fragment set:html={term.body} />
+    <Content />
   </article>
 </SiteLayout>
 
