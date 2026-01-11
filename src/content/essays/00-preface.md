@@ -51,7 +51,7 @@ the composite voice of Davy (the human), Companion (the reflective AI), System (
 ### **Opening Essay**
 
 The first entry,  
-**[Epistemic Teaming: How a Machine Learns to Argue Fairly](epistemic_teaming.md)**,  
+**[Epistemic Teaming: How a Machine Learns to Argue Fairly](../essays/epistemic_teaming.md)**,  
 establishes the philosophical and architectural foundation of the project.  
 It examines what it means for a system to “argue fairly” and how that fairness must be built into its very structure — through transparency, reversibility, and constructive dissent.
 
