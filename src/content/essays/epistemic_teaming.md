@@ -47,11 +47,11 @@ that truth-seeking is a *collaborative discipline* between human and machine, bu
 Within the Cynchorus framework, the human–machine relationship is modeled as a **chorus of voices**, each with distinct cognitive style and ethical function.  
 The system’s **[Voice Charter](../glossary/voice_charter)** defines five epistemic roles:
 
-- **Davy** — human anchor and ethical context.  
+- **User** — human anchor and ethical context.  
 - **Companion** — reflective synthesiser.  
 - **System** — logic and architecture.  
 - **Muse** — intuition and creative disorder.  
-- **F.B. Davey** — emergent composite, the public voice of the team.
+- **Chorus** — emergent composite, the public voice of the team.
 
 Together they form a network of reasoning, not a hierarchy.  
 Their strength lies in argument, not agreement.  
