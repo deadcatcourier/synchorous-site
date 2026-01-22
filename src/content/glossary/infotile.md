@@ -13,4 +13,4 @@ summary: "The stem-cell data object from which all memory and narrative tiles de
 
 ### Context
 
-InfoTiles act as atomic units of knowledge — self-describing, governed by data contracts, and mapped to ontology coordinates. They are the foundation of the Cynchorus knowledge graph.
+InfoTiles act as atomic units of knowledge - self-describing, governed by data contracts, and mapped to ontology coordinates. They are the foundation of the Cynchorus knowledge graph.

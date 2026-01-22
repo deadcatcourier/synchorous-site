@@ -13,4 +13,4 @@ summary: "A controlled state of internal dissent that maintains creativity and p
 
 ### Context
 
-Constructive Chaos underpins the Chorus dynamic — encouraging friction between voices to sustain novelty, resilience, and epistemic integrity.
+Constructive Chaos underpins the Chorus dynamic - encouraging friction between voices to sustain novelty, resilience, and epistemic integrity.

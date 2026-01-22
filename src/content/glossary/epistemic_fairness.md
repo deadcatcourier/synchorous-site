@@ -13,4 +13,4 @@ summary: "The design principle ensuring that competing perspectives are weighted
 
 ### Context
 
-Within Cynchorus, fairness is achieved through traceability, equitable data weighting, and open critique among system voices — an architecture-level safeguard against bias.
+Within Cynchorus, fairness is achieved through traceability, equitable data weighting, and open critique among system voices - an architecture-level safeguard against bias.

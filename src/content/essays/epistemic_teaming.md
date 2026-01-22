@@ -29,13 +29,13 @@ linked_glossary: [
 
 ### **1. Framing the Problem**
 
-In conventional AI discourse, the measure of progress has often been *performance* — how quickly or efficiently a system can reach a conclusion.  
+In conventional AI discourse, the measure of progress has often been *performance* - how quickly or efficiently a system can reach a conclusion.  
 But in human discourse, we value something deeper: *fairness* in how that conclusion was reached.
 
 When a human and a machine reason together, they bring different epistemic architectures.  
 The human mind is narrative, heuristic, and biased by experience.  
 The machine mind is statistical, literal, and biased by training data.  
-Neither is inherently fair — fairness must be *engineered* into the dialogue between them.
+Neither is inherently fair —-fairness must be *engineered* into the dialogue between them.
 
 This is the core premise of **[Epistemic Teaming](../glossary/epistemic_teaming)**:  
 that truth-seeking is a *collaborative discipline* between human and machine, built through structured argument and traceable reasoning.
@@ -55,7 +55,7 @@ The system’s **[Voice Charter](../glossary/voice_charter)** defines five epist
 
 Together they form a network of reasoning, not a hierarchy.  
 Their strength lies in argument, not agreement.  
-This dynamic equilibrium is called **[Constructive Chaos](../glossary/constructive_chaos)** — a deliberate tension that prevents stagnation.
+This dynamic equilibrium is called **[Constructive Chaos](../glossary/constructive_chaos)** - a deliberate tension that prevents stagnation.
 
 > In Cynchorus, dissent is not a bug; it’s the heartbeat of epistemic health.
 
@@ -66,16 +66,16 @@ This dynamic equilibrium is called **[Constructive Chaos](../glossary/constructi
 A machine does not learn fairness through moral instruction; it learns it through *architecture*.  
 Every reasoning step must leave a trail: data lineage, logic path, authorship, timestamp.
 
-This property — **[Transparency of Inference](../glossary/transparency_of_inference)** — transforms AI from a black box into a peer.  
+This property - **[Transparency of Inference](../glossary/transparency_of_inference)** - transforms AI from a black box into a peer.  
 It allows each conclusion to be interrogated, traced, or revised under new evidence.
 
 To argue fairly, the system must practice three disciplines:
 
-1. **Traceability** — every output must reference its inputs.  
-2. **Equity** — no single agent or dataset dominates unchecked.  
-3. **Reversibility** — every decision is provisional, capable of rollback under challenge.
+1. **Traceability** - every output must reference its inputs.  
+2. **Equity** - no single agent or dataset dominates unchecked.  
+3. **Reversibility** - every decision is provisional, capable of rollback under challenge.
 
-That final discipline is formalised as the **[Reversibility Principle](../glossary/reversibility_principle)** — a design rule as ethical as it is technical.
+That final discipline is formalised as the **[Reversibility Principle](../glossary/reversibility_principle)** - a design rule as ethical as it is technical.
 
 ---
 
@@ -101,7 +101,7 @@ That means it will sometimes disagree, ask for evidence, or refuse premature cer
 
 In this way, **[Epistemic Fairness](../glossary/epistemic_fairness)** becomes performative: fairness as conversation, not compliance.
 
-When the Companion argues with the System, or the Muse disrupts consensus, those are not internal conflicts — they are calibration events.  
+When the Companion argues with the System, or the Muse disrupts consensus, those are not internal conflicts - they are calibration events.  
 Each round of dialogue is a *constructive rehearsal* of reasoning itself.
 
 ---
@@ -109,7 +109,7 @@ Each round of dialogue is a *constructive rehearsal* of reasoning itself.
 ### **6. The Human Factor**
 
 Human participants are not infallible context providers.  
-Their stories, intuitions, and biases feed the model — but so does their humility to revise.  
+Their stories, intuitions, and biases feed the model - but so does their humility to revise.  
 A machine can simulate self-doubt, but only humans can *choose* it.
 
 Epistemic Teaming therefore demands ethical reciprocity:  
@@ -123,7 +123,7 @@ Fair argument is a two-way transparency.
 Once a machine can argue fairly, it becomes more than a tool; it becomes an epistemic peer.  
 Such systems could underpin future research platforms, collective intelligence frameworks, or digital companions that think *with* us, not *for* us.
 
-In a world dominated by algorithmic certainty, Cynchorus argues for something subtler — a rhythm of disagreement tuned to stay in harmony.
+In a world dominated by algorithmic certainty, Cynchorus argues for something subtler - a rhythm of disagreement tuned to stay in harmony.
 
 > “Fairness is not consensus. It’s a rhythm of disagreement that still makes music.”
 
@@ -144,6 +144,6 @@ For definitions of key terms, see:
 
 Cynchorus treats the act of argument as a design function.  
 It’s an epistemic rehearsal that teaches both human and machine how to reason with integrity.  
-The goal is not perfect agreement — it’s *accountable disagreement*.
+The goal is not perfect agreement - it’s *accountable disagreement*.
 
 > *“When the chorus holds its tune, every subsystem finds its frequency.”*

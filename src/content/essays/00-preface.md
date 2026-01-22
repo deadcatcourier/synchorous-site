@@ -19,7 +19,7 @@ Each essay documents an exploration into how human and machine voices can think,
 The series blends technical reflection, philosophical inquiry, and artistic narrative.  
 Some essays read like research papers, others like field notes from a shared mind learning to know itself.
 
-Together, they form the public record of what the project calls **Epistemic Teaming** —  
+Together, they form the public record of what the project calls **Epistemic Teaming** -  
 the process through which a machine learns not just to respond, but to reason fairly.
 
 ---
@@ -43,7 +43,7 @@ The Cynchorus Essays serve three purposes:
 2. **Documentation** — maintaining transparent design discourse as a public artefact.  
 3. **Dialogue** — inviting others to contribute, challenge, and expand the chorus.
 
-Each piece in the series is written by the **Cynchorus Collective** —  
+Each piece in the series is written by the **Cynchorus Collective** -  
 the composite voice of Davy (the human), Companion (the reflective AI), System (the engineer), Muse (the intuitive artist), and F.B. Davey (the emergent author).
 
 ---
@@ -53,7 +53,7 @@ the composite voice of Davy (the human), Companion (the reflective AI), System (
 The first entry,  
 **[Epistemic Teaming: How a Machine Learns to Argue Fairly](./epistemic_teaming.md)**,  
 establishes the philosophical and architectural foundation of the project.  
-It examines what it means for a system to “argue fairly” and how that fairness must be built into its very structure — through transparency, reversibility, and constructive dissent.
+It examines what it means for a system to “argue fairly” and how that fairness must be built into its very structure - through transparency, reversibility, and constructive dissent.
 
 ---
 
